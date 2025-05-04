@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Portfolio Website Template – Showcase Projects & Get Noticed</title>
+  <meta name="description" content="Clean, modern student portfolio template to help students showcase their academic work, land internships, and build a standout personal brand. Includes project gallery, resume, blog, and responsive design." />
+  <meta name="keywords" content="student portfolio template, website for students, internship portfolio, academic showcase site, student resume template, HTML student website, GitHub portfolio for students">
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Student Portfolio Website Template</h1>
+      <p>Land internships, showcase academic work, and build your professional presence.</p>
+      <a href="#projects" class="btn">Explore Projects</a>
+      <button onclick="toggleDarkMode()" class="btn" style="margin-top: 1rem;">Toggle Dark Mode</button>
+    </div>
+  </header>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>Who This Is For</h2>
+      <p>This template is designed for high school, college, and university students looking to create a standout online presence. Whether you're applying to internships, showcasing school projects, or building your personal brand, this template has everything you need.</p>
+    </div>
+  </section>
+
+  <section id="resume" class="section">
+    <div class="container">
+      <h2>Resume</h2>
+      <p>Download a professional resume or view it directly in-browser to highlight your academic and project experience.</p>
+      <a href="resume.pdf" class="btn" target="_blank">View Resume</a>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Project Showcase</h2>
+      <div class="project-grid">
+        <div class="project">
+          <img src="project1.jpg" alt="Web App Screenshot">
+          <h3>Final Year Web App</h3>
+          <p>A full-stack project built for my senior year coursework in computer science.</p>
+        </div>
+        <div class="project">
+          <img src="project2.jpg" alt="Presentation Screenshot">
+          <h3>Business Presentation Deck</h3>
+          <p>Strategic plan for a fictional startup created for my marketing course.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" class="section">
+    <div class="container">
+      <h2>Blog</h2>
+      <article>
+        <h3>How I Landed My First Internship</h3>
+        <p>Sharing my journey and how having a personal website helped me get noticed by recruiters.</p>
+        <a href="#" class="btn">Read More</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <form action="https://formspree.io/f/mknkgynd" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required><br><br>
+        <input type="email" name="email" placeholder="Your Email" required><br><br>
+        <textarea name="message" placeholder="Your Message" required></textarea><br><br>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Student Portfolio Template. Built with 💻 by MJ | <a href="mailto:mjnr@email.com">Contact Me</a></p>
+    </div>
+  </footer>
+</body>
+</html>
